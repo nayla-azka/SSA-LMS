@@ -1,0 +1,70 @@
+<!-- SIMPAN DI ADDITIONAL HTML -> BEFORE BODY IS CLOSED -->
+
+<div class="custom-support-button">
+    <a href="https://wa.me/+6289681144333" class="support-icon">
+        <i class="fa fa-comments" aria-hidden="true"></i>
+    </a>
+</div>
+
+<style>
+:root {
+    --brand-blue: #427bac;
+    --brand-blue-dark: #2d6a9f;
+}
+
+.custom-support-button {
+    position: fixed;
+    bottom: 100px; /* Higher to avoid Snap's "Back to Top" button */
+    right: 25px;
+    z-index: 999;
+}
+
+.support-icon {
+    display: flex;
+    align-items: center;
+    background-color: var(--brand-blue);
+    color: #ffffff !important;
+    padding: 12px 20px;
+    border-radius: 50px;
+    text-decoration: none !important;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.support-icon i {
+    font-size: 20px;
+}
+
+.support-icon:hover {
+    background-color: var(--brand-blue-dark);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    color: #ffffff !important;
+}
+
+/* Mobile: Just the icon circle to save screen real estate */
+@media (max-width: 576px) {
+    .support-icon span {
+        display: none;
+    }
+    .support-icon {
+        padding: 15px;
+        border-radius: 50%;
+    }
+    .support-icon i {
+        margin-right: 0;
+        font-size: 24px;
+    }
+}
+</style>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    if (!document.body.classList.contains('pagelayout-frontpage')) {
+        const btn = document.querySelector('.custom-support-button');
+        if (btn) btn.style.display = 'none';
+    }
+});
+</script>
