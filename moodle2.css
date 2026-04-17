@@ -122,6 +122,10 @@ footer#page-footer {
     max-width: 100% !important;
 }
 
+#mr-nav {
+    background-color: #ffffff;
+}
+
 /* Fixed header layers */
 #snap-header-container,
 .fixed-top,
